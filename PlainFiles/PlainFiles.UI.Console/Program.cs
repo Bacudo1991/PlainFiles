@@ -1,7 +1,6 @@
 ﻿using PlainFiles.Core;
-using System.ComponentModel.Design;
 
-var textFile = new SimpleTextFile("data.txt");
+var textFile = new SimpleTextFile(".//data//data.txt");
 var lines = textFile.ReadAllLines().ToList();
 var opt = string.Empty;
 
@@ -49,6 +48,7 @@ do
     
 }
 while (opt != "0");
+textFile.WriteAllLines(lines.ToArray());
 
 string Menu()
 {

@@ -29,7 +29,6 @@ public class SimpleTextFile
         }
     }
 
-
     public void WriteAllLines(string[] lines)
     {
          File.WriteAllLines(_path, lines);
