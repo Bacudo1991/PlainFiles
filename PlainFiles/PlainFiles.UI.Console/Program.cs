@@ -34,11 +34,16 @@ do
                 break;
             }
             Console.WriteLine($"Current list: {listName}");
-            Console.WriteLine("Names|Surnames|Ages");
+            Console.WriteLine();
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("   NAMES\t|   SURNAMES\t|   AGES");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine();
             foreach (var person in people)
             {                
-                Console.WriteLine($"{person[0]}|{person[1]}|{person[2]}");
+                Console.WriteLine($"{person[0],-10}\t|{person[1],-10}\t|{person[2],-10}\t");
             }
+            Console.WriteLine("___________________________________________");
             break;
         case "3":
             SaveFile(people, listName);
@@ -61,6 +66,7 @@ while (option != "0");
 
 string MyMenu()
 {
+    Console.WriteLine();
     Console.WriteLine("1. Add.                                ");
     Console.WriteLine("2. Show list.");
     Console.WriteLine("3. Save");
