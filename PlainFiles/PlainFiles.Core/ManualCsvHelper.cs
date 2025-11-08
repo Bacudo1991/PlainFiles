@@ -4,14 +4,12 @@ public class ManualCsvHelper
 {
     public void WriteCsv(string path, List<string[]> records)
     {
-        if (string.IsNullOrWhiteSpace(path))
-        {
+        if (string.IsNullOrWhiteSpace(path))        
             throw new ArgumentException("Path cannot be null or empty.", nameof(path));
-        }
-        if (records == null)
-        {
+        
+        if (records == null)        
             throw new ArgumentNullException(nameof(records), "Records cannot be null.");
-        }
+        
 
         EnsureFileAndDirectory(path);
 
@@ -25,10 +23,9 @@ public class ManualCsvHelper
 
     public List<string[]> ReadCsv(string path)
     {
-        if (string.IsNullOrWhiteSpace(path))
-        {
+        if (string.IsNullOrWhiteSpace(path))        
             throw new ArgumentException("Path cannot be null or empty.", nameof(path));
-        }
+        
 
         EnsureFileAndDirectory(path);
 
@@ -46,14 +43,13 @@ public class ManualCsvHelper
     private static void EnsureFileAndDirectory(string path)
     {
         var directory = Path.GetDirectoryName(path);
-        if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
-        {
+        if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))        
             Directory.CreateDirectory(directory);
-        }
+
+        // Create an empty file and close it immediately
         if (!File.Exists(path))
         {
-            // Create an empty file and close it immediately
             using var fs = File.Create(path);
-        }
+        }        
     }
 }

@@ -64,6 +64,8 @@ string MyMenu()
     Console.WriteLine("1. Add.                                ");
     Console.WriteLine("2. Show list.");
     Console.WriteLine("3. Save");
+    Console.WriteLine("4. Delete");
+    Console.WriteLine("5. Sort");
     Console.WriteLine("0. Exit.");
     Console.Write("Select an option: ");
     return Console.ReadLine() ?? string.Empty;
