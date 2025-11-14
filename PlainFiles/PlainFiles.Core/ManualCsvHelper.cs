@@ -8,8 +8,7 @@ public class ManualCsvHelper
             throw new ArgumentException("Path cannot be null or empty.", nameof(path));
         
         if (records == null)        
-            throw new ArgumentNullException(nameof(records), "Records cannot be null.");
-        
+            throw new ArgumentNullException(nameof(records), "Records cannot be null.");        
 
         EnsureFileAndDirectory(path);
 
