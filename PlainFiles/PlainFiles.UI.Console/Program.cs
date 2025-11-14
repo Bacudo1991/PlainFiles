@@ -180,17 +180,6 @@ void SaveFile(List<string[]> people, string? listName)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 //CLASS MANUALCSVHELPER USAGE EXAMPLE
 //var people = new List<string[]>
 //{
